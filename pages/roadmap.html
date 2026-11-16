@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a101d">
+  <meta name="description" content="將 RAG 與 Reflection 整合為生活任務智慧急救站的可行性規劃。">
+  <title>小呆萌 4.0｜未來整合計畫｜小呆萌 AI 實驗室</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="小呆萌 AI 實驗室首頁"><span class="brand-mark" aria-hidden="true">✿</span><span>小呆萌 <span style="color:var(--pink)">AI LAB</span></span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">選單 ☰</button>
+    <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a href="../index.html">首頁</a>
+      <a href="../index.html#projects">作品紀錄</a>
+      <a href="../index.html#method">擴充規則</a>
+      <a href="../pages/roadmap.html" aria-current="page">未來計畫</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container">
+ <a class="breadcrumb" href="../index.html#projects">← 返回作品清單</a>
+ <div class="tag-row"><span class="pill future">構想規劃中</span><span class="tag">RAG</span><span class="tag">Reflection</span><span class="tag">Roadmap</span></div>
+ <h1>小呆萌 4.0<br><span class="gradient-text">從單一功能走向完整工作流。</span></h1>
+ <p class="lead">預計讓 AI 不只會查資料，也會根據資料做計畫、檢查計畫，再提供改善後的行動建議。</p>
+</div></section>
+<div class="container article"><div class="article-grid">
+<article class="article-content">
+ <section><h2>01 · 預計解決的問題</h2><p>使用者常遇到「時間有限、不知道從何開始」的困難。單純由 AI 產生回答，可能缺乏可追溯的資料依據；只有 RAG，卻不一定能避免不合理的時間安排。因此下一步預計整合兩種功能。</p></section>
+ <section><h2>02 · 預計系統流程</h2>
+  <div class="timeline"><div class="timeline-item"><div class="num">1</div><div><strong>使用者輸入任務</strong><p>描述任務、截止期限與目前困難。</p></div></div><div class="timeline-item"><div class="num">2</div><div><strong>RAG 搜尋相關教材</strong><p>向量化問題，從時間管理知識庫取回相關段落。</p></div></div><div class="timeline-item"><div class="num">3</div><div><strong>Generate → Reflect → Revise</strong><p>以檢索到的資料為參考，產生、檢查並改善計畫。</p></div></div><div class="timeline-item"><div class="num">4</div><div><strong>Python 時間檢查</strong><p>比對主要步驟時間，提示可能的超時與格式問題。</p></div></div><div class="timeline-item"><div class="num">5</div><div><strong>Gradio 統一展示</strong><p>將初稿、反思、改善版和來源放在同一頁面。</p></div></div></div>
+ </section>
+ <section><h2>03 · 目前進度與開發順序</h2>
+  <ul><li><strong>已完成原型：</strong>小呆萌 2.0 的 RAG 檢索與來源展示。</li><li><strong>已完成原型：</strong>小呆萌 3.0 的 Reflection 三階段呼叫與 Gradio 展示。</li><li><strong>尚待完成：</strong>將兩個流程串接、統一 Gradio 介面，並執行整合測試。</li></ul>
+  <div class="note"><p>本頁是未來規劃，而非已完成產品。專案展示與實際功能狀態分開標示，避免誤解。</p></div>
+ </section>
+ <section><h2>04 · 這個網站也會繼續成長</h2><p>每完成一個新功能，就可依照 AGENTS.md 複製標準頁面模板，新增專案介紹、記錄測試與已知限制，再把作品加入首頁。這是「小呆萌 AI 實驗室」本身的可持續擴充設計。</p></section>
+ <div class="cta-box"><div><h3>從已完成的原型開始</h3><p>先理解每個模組，再逐步整合。</p></div><a class="btn" href="rag.html">回顧 RAG →</a></div>
+</article>
+<aside class="article-sidebar"><div class="panel"><span class="eyebrow">PROJECT INFO</span><h3 style="margin-top:12px">開發規劃</h3><ul class="sidebar-list"><li>目前狀態：規劃中</li><li>資料層：RAG</li><li>Agent 層：Reflection</li><li>時間檢查：Python</li><li>使用介面：Gradio</li><li>網頁介紹：本靜態站</li></ul></div></aside>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container footer-inner">
+  <span>© <span data-current-year>2026</span> 小呆萌 AI LAB · 從課堂練習走向可持續擴充的作品網站</span>
+  <span>依照 <a href="../AGENTS.md">AGENTS.md</a> 建立 · GitHub Pages 靜態網站</span>
+</div></footer>
+<script defer src="../assets/site.js"></script>
+</body>
+</html>

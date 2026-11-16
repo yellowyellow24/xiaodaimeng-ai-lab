@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a101d">
+  <meta name="description" content="18 篇時間管理教材、FAISS 向量檢索與 Groq RAG 回答的原型紀錄。">
+  <title>小呆萌 2.0｜RAG 知識檢索｜小呆萌 AI 實驗室</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="小呆萌 AI 實驗室首頁"><span class="brand-mark" aria-hidden="true">✿</span><span>小呆萌 <span style="color:var(--pink)">AI LAB</span></span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">選單 ☰</button>
+    <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a href="../index.html" aria-current="page">首頁</a>
+      <a href="../index.html#projects">作品紀錄</a>
+      <a href="../index.html#method">擴充規則</a>
+      <a href="../pages/roadmap.html">未來計畫</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container">
+ <a class="breadcrumb" href="../index.html#projects">← 返回作品清單</a>
+ <div class="tag-row"><span class="pill">已完成原型</span><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">Groq</span></div>
+ <h1>小呆萌 2.0<br><span class="gradient-text">先找資料，再回答。</span></h1>
+ <p class="lead">讓生活任務規劃多一層知識依據：使用者提問後，先從教材搜尋相關內容，再請 AI 整理行動建議。</p>
+</div></section>
+<div class="container article"><div class="article-grid">
+<article class="article-content">
+ <section><h2>01 · 專案目標</h2>
+  <p>「小呆萌 2.0｜生活任務急救站」延續任務拆解助手，加入檢索增強生成（Retrieval-Augmented Generation, RAG）。當使用者只剩有限時間完成報告或考試準備時，系統希望提供有教材依據的具體行動計畫。</p>
+ </section>
+ <section><h2>02 · 實作流程</h2>
+  <div class="process-grid"><div class="process-box"><span>01</span><h3>整理教材</h3><p>18 篇時間管理情境教材，包含優先順序、緩衝、專注策略。</p></div><div class="process-box"><span>02</span><h3>向量檢索</h3><p>Sentence Transformers 產生向量；FAISS 找出相關內容。</p></div><div class="process-box"><span>03</span><h3>回答展示</h3><p>AISuite 串接 Groq；Gradio 顯示建議及來源。</p></div></div>
+  <div class="panel" style="margin-top:16px"><h3>實際使用時的資訊流</h3><p>提問 → 問題向量化 → FAISS 搜尋 Top-K 文件 → 組成參考內容 → Groq 生成回答 → 顯示引用與來源</p></div>
+ </section>
+ <section><h2>03 · 使用者情境</h2><div class="note"><p>「我明天要交報告，但只剩兩小時，應該怎麼安排時間？」</p></div>
+  <p>系統從知識庫尋找與緊急任務相關的教材，再將複雜任務轉換成可以立即開始的少量步驟，並說明參考文件。網頁上看到的相似度用於排序，不代表答案正確率。</p>
+ </section>
+ <section><h2>04 · 已完成與限制</h2>
+  <ul><li>已完成：18 篇教材索引、FAISS 檢索、Groq 回答、Gradio 介面與來源展示。</li><li>仍須注意：教材經整理與改寫，並非原始來源逐字內容；模型引用正確編號不保證內容解讀正確。</li><li>本展示網站只介紹專案，沒有直接呼叫 Groq 或使用私人 API Key。</li></ul>
+ </section>
+ <div class="cta-box"><div><h3>下一個實驗：讓 AI 自我反思</h3><p>光有參考資料還不夠，計畫也需要檢查。</p></div><a class="btn" href="reflection.html">看小呆萌 3.0 →</a></div>
+</article>
+<aside class="article-sidebar"><div class="panel"><span class="eyebrow">PROJECT INFO</span><h3 style="margin-top:12px">技術摘要</h3>
+<ul class="sidebar-list"><li>主題：時間管理與任務拆解</li><li>文件數：18 篇</li><li>向量模型：embeddinggemma-2</li><li>搜尋工具：FAISS</li><li>語言模型：Groq</li><li>展示方式：Gradio</li></ul></div></aside>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container footer-inner">
+  <span>© <span data-current-year>2026</span> 小呆萌 AI LAB · 從課堂練習走向可持續擴充的作品網站</span>
+  <span>依照 <a href="../AGENTS.md">AGENTS.md</a> 建立 · GitHub Pages 靜態網站</span>
+</div></footer>
+<script defer src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a101d">
+  <meta name="description" content="小呆萌 AI 實驗室：可持續擴充的 AI 學習作品與筆記網站">
+  <title>首頁｜小呆萌 AI 實驗室</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="小呆萌 AI 實驗室首頁"><span class="brand-mark" aria-hidden="true">✿</span><span>小呆萌 <span style="color:var(--pink)">AI LAB</span></span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">選單 ☰</button>
+    <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a href="index.html" aria-current="page">首頁</a>
+      <a href="index.html#projects">作品紀錄</a>
+      <a href="index.html#method">擴充規則</a>
+      <a href="pages/roadmap.html">未來計畫</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">A tiny lab for bigger ideas · AI × Learning</span>
+    <h1>讓每一次練習，<br><span class="gradient-text">都成為下一次進步。</span></h1>
+    <p class="lead">歡迎來到「小呆萌 AI 實驗室」。這裡記錄從任務拆解、RAG 知識檢索，到 Reflection Agent 反思改良的開發旅程。網站由統一的 <strong>AGENTS.md 規則</strong>管理，讓 AI 能持續擴充新的作品與筆記。</p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">探索實驗作品 <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-outline" href="#method">了解如何持續擴充</a>
+    </div>
+    <div class="metric-row" aria-label="專案概覽">
+      <div class="metric"><strong>3</strong><span>主題內容頁</span></div>
+      <div class="metric"><strong>18</strong><span>RAG 教材篇數</span></div>
+      <div class="metric"><strong>1 份</strong><span>全站 AI 開發規則</span></div>
+    </div>
+  </div>
+</section>
+<section id="projects" class="content-section">
+  <div class="container">
+    <div class="section-top"><div><span class="eyebrow">EXPLORE THE WORK</span><h2>從作品開始認識 AI</h2><p>每篇內容都遵循同一套標題、摘要、流程、成果與限制結構。</p></div><span class="pill">可持續新增</span></div>
+    <div class="cards">
+      <article class="card">
+        <div class="mini-label"><span class="pill">已完成原型</span><span style="color:var(--muted);font-size:.8rem">RAG · 02</span></div>
+        <div class="card-icon" aria-hidden="true">📚</div>
+        <h3>小呆萌 2.0｜知識檢索</h3>
+        <p>以 18 篇時間管理教材建構 FAISS 資料庫，讓 AI 先找證據，再提出任務建議。</p>
+        <a class="card-link" href="pages/rag.html" aria-label="閱讀小呆萌 2.0 知識檢索介紹">閱讀專案介紹 <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="card">
+        <div class="mini-label"><span class="pill">已完成原型</span><span style="color:var(--muted);font-size:.8rem">AGENT · 03</span></div>
+        <div class="card-icon" aria-hidden="true">🔍</div>
+        <h3>小呆萌 3.0｜反思改良</h3>
+        <p>讓 AI 分三次呼叫完成初稿、反思與修改，並比較時間分配前後差異。</p>
+        <a class="card-link" href="pages/reflection.html" aria-label="閱讀小呆萌 3.0 反思改良介紹">閱讀專案介紹 <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="card">
+        <div class="mini-label"><span class="pill future">構想規劃中</span><span style="color:var(--muted);font-size:.8rem">ROADMAP · 04</span></div>
+        <div class="card-icon" aria-hidden="true">🌷</div>
+        <h3>小呆萌 4.0｜智慧急救站</h3>
+        <p>預計整合 RAG 的證據檢索與 Reflection 的計畫檢查，成為更完整的任務助手。</p>
+        <a class="card-link" href="pages/roadmap.html" aria-label="閱讀小呆萌 4.0 未來計畫">查看未來計畫 <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="method" class="content-section">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">DESIGNED TO GROW</span>
+      <h2>不只是做出這個網頁，<br>更要讓 AI 知道怎麼繼續做。</h2>
+      <p class="lead">本專案將網站規則寫進根目錄的 <strong>AGENTS.md</strong>：從檔名、資料夾、頁面模板、文案結構到安全與驗收條件，讓每次新增內容都能保持同一風格。</p>
+      <div class="hero-actions"><a class="btn btn-outline" href="AGENTS.md">查看 AGENTS.md 規則 →</a></div>
+    </div>
+    <div class="panel">
+      <h3>新增一篇內容，只需照著流程</h3>
+      <ol class="steps">
+        <li><div><strong>先讀 AGENTS.md</strong><span>確認分類、命名與內容要求。</span></div></li>
+        <li><div><strong>複製共用頁面模板</strong><span>建立 pages/ 下的新 HTML，填寫指定欄位。</span></div></li>
+        <li><div><strong>更新首頁作品卡片</strong><span>使用既有元件與樣式，維持一致。</span></div></li>
+        <li><div><strong>執行驗證並發布</strong><span>檢查連結、語意標籤與行動版，再上傳 GitHub。</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="content-section" style="padding-top:0">
+  <div class="container"><div class="cta-box"><div><h3>每個作品都有下一步。</h3><p>從已完成的 RAG 與 Reflection 原型，延伸成可持續更新的學習歷程。</p></div><a class="btn" href="pages/roadmap.html">探索下一個版本 →</a></div></div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner">
+  <span>© <span data-current-year>2026</span> 小呆萌 AI LAB · 從課堂練習走向可持續擴充的作品網站</span>
+  <span>依照 <a href="AGENTS.md">AGENTS.md</a> 建立 · GitHub Pages 靜態網站</span>
+</div></footer>
+<script defer src="assets/site.js"></script>
+</body>
+</html>

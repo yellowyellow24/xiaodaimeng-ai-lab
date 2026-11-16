@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a101d">
+  <meta name="description" content="Generate → Reflect → Revise 三階段 AI Agent 反思改良實作與測試。">
+  <title>小呆萌 3.0｜Reflection Agent｜小呆萌 AI 實驗室</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="小呆萌 AI 實驗室首頁"><span class="brand-mark" aria-hidden="true">✿</span><span>小呆萌 <span style="color:var(--pink)">AI LAB</span></span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">選單 ☰</button>
+    <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a href="../index.html" aria-current="page">首頁</a>
+      <a href="../index.html#projects">作品紀錄</a>
+      <a href="../index.html#method">擴充規則</a>
+      <a href="../pages/roadmap.html">未來計畫</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container">
+ <a class="breadcrumb" href="../index.html#projects">← 返回作品清單</a>
+ <div class="tag-row"><span class="pill">已完成原型</span><span class="tag">Reflection</span><span class="tag">AI Agent</span><span class="tag">Gradio</span></div>
+ <h1>小呆萌 3.0<br><span class="gradient-text">讓 AI 檢查自己的計畫。</span></h1>
+ <p class="lead">同一題，分三次 AI 呼叫完成初稿、反思與修改，而不是在一次回答中假裝「已經反思」。</p>
+</div></section>
+<div class="container article"><div class="article-grid">
+<article class="article-content">
+ <section><h2>01 · 專案目標</h2><p>任務拆解計畫常出現步驟過多、時間超支，或沒有安排檢查時間的問題。「小呆萌 3.0」使用 Reflection Agent 的三階段流程，讓模型對照原始需求檢查初稿，再提出改善版。</p></section>
+ <section><h2>02 · Reflection 三階段</h2>
+ <div class="process-grid"><div class="process-box"><span>01</span><h3>Generate</h3><p>根據任務與時間限制，產生初版計畫。</p></div><div class="process-box"><span>02</span><h3>Reflect</h3><p>檢查時間總和、可行性與需求符合程度。</p></div><div class="process-box"><span>03</span><h3>Revise</h3><p>整合原始需求、初稿與評論，修改計畫。</p></div></div>
+ </section>
+ <section><h2>03 · 實際測試：60 分鐘考前複習</h2>
+  <div class="note"><p>需求：明天要考試，只有 60 分鐘複習三章，並希望至少保留 10 分鐘作最後檢查。</p></div>
+  <div style="overflow-x:auto;margin:18px 0"><table class="data-table"><thead><tr><th>安排</th><th>初稿</th><th>改善版</th></tr></thead><tbody><tr><td>啟動</td><td>5 分鐘</td><td>5 分鐘</td></tr><tr><td>章節複習</td><td>45 分鐘</td><td>42 分鐘</td></tr><tr><td>總整理</td><td>10 分鐘</td><td>10 分鐘</td></tr><tr><td>額外緩衝</td><td>0 分鐘</td><td>3 分鐘</td></tr></tbody></table></div>
+  <p>Reflect 指出：原本的「每章複習 15 分鐘」之外又要求每章後檢查 1 分鐘，可能造成實際時間超支。Revise 將每章設定為包含檢查的 14 分鐘，保留 3 分鐘額外緩衝。</p>
+ </section>
+ <section><h2>04 · 額外測試與限制</h2>
+  <ul><li>使用 Python 正規表示式辨識主要步驟的分鐘數，協助比較初稿與改善版。</li><li>曾發現驗證程式把「修改說明」誤認為步驟，已調整辨識邏輯。</li><li>Python 時間檢查只覆蓋主要步驟，不等於逐項驗證每個細節。</li><li>改善版仍可能有錯，使用者應自行核對。</li></ul>
+ </section>
+ <div class="cta-box"><div><h3>下一步：把知識與反思結合</h3><p>將 RAG 與 Reflection 整合成同一個工作流程，是未來的規劃。</p></div><a class="btn" href="roadmap.html">前往小呆萌 4.0 →</a></div>
+</article>
+<aside class="article-sidebar"><div class="panel"><span class="eyebrow">PROJECT INFO</span><h3 style="margin-top:12px">技術摘要</h3><ul class="sidebar-list"><li>Agent 方法：Reflection</li><li>模型呼叫：3 次</li><li>模型：Groq GPT-OSS</li><li>執行環境：Google Colab</li><li>展示：Gradio 三欄對照</li><li>額外檢查：Python</li></ul></div></aside>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container footer-inner">
+  <span>© <span data-current-year>2026</span> 小呆萌 AI LAB · 從課堂練習走向可持續擴充的作品網站</span>
+  <span>依照 <a href="../AGENTS.md">AGENTS.md</a> 建立 · GitHub Pages 靜態網站</span>
+</div></footer>
+<script defer src="../assets/site.js"></script>
+</body>
+</html>
